@@ -5,3 +5,4 @@ export { default as CatalogDetail } from "@/pages/CatalogDetail/CatalogDetail";
 export { default as Favourite } from "@/pages/Favourite/Favourite";
 export { default as Cart } from "@/pages/Cart/Cart";
 export { default as Order } from "@/pages/Order/Order";
+export { default as Layout } from "@/pages/Layout/Layout";

@@ -6,6 +6,7 @@ import {
   Favourite,
   Cart,
   Order,
+  Layout,
 } from "@/pages";
 import {
   setIsError,
@@ -43,31 +44,37 @@ const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/catalogs",
-      element: <Catalogs />,
-    },
-    {
-      path: "/details",
-      element: <Details />,
-    },
-    {
-      path: "/catalog-details",
-      element: <CatalogDetail />,
-    },
-    {
-      path: "/favourite",
-      element: <Favourite />,
-    },
-    {
-      path: "/cart",
-      element: <Cart />,
-    },
-    {
-      path: "/order",
-      element: <Order />,
+      element: <Layout />,
+      children: [
+        {
+          path: "",
+          element: <Home />
+        },
+        {
+          path: "/catalogs",
+          element: <Catalogs />,
+        },
+        {
+          path: "/details",
+          element: <Details />,
+        },
+        {
+          path: "/catalog-details",
+          element: <CatalogDetail />,
+        },
+        {
+          path: "/favourite",
+          element: <Favourite />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
+        },
+        {
+          path: "/order",
+          element: <Order />,
+        },
+      ]
     },
   ]);
 

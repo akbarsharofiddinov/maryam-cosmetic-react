@@ -4,7 +4,7 @@ import { useGetProductsByCategoryQuery } from "@/store/RTKQuery";
 
 const CatalogDetail: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [sliderValue, setSliderValue] = useState<number[]>([20000, 100000]);
+  const [sliderValue, setSliderValue] = useState<number[]>([20000, 300000]);
   const params = Number.parseInt(window.location.search.slice(4));
   const { isLoading, isError, isSuccess, data } = useGetProductsByCategoryQuery(
     {

@@ -1,9 +1,8 @@
-import { useAppDispatch, useAppSelector } from "@/store/hooks/hooks";
-import { useGetHistoryOrdersQuery } from "@/store/RTKQuery";
+import { useAppSelector } from "@/store/hooks/hooks";
+
 import { formatter } from "@/utils/formatString";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const MyOrders: React.FC = () => {
   const [historyData, setHistoryData] = useState<IHistory[]>([]);

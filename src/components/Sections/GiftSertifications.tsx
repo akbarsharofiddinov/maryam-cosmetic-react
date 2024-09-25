@@ -10,22 +10,20 @@ const GiftSertifications: React.FC = () => {
       <section className="gift-sertifications">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Sovg’a sertifikatlari</h3>
+            <h3 className="title">Подарочные сертификаты</h3>
           </div>
           <div className="section-inner">
             <div
               className="sertification-card"
               style={{ background: `url(${bg1})` }}
             >
-              <h3 className="title">CHEGIRMA</h3>
+              <h3 className="title">СКИДКА</h3>
               <div className="body">
                 <div className="top">
                   <h1>25%</h1>
-                  <button>Foydalanish</button>
+                  <button>Использовать</button>
                 </div>
-                <p className="desc">
-                  Barcha “Parfume” mahsulotlari uchun chegirma.
-                </p>
+                <p className="desc">Скидка на всю продукцию «Парфюмерия».</p>
                 <p className="date">21.08.2024 - 21.12.2024</p>
               </div>
             </div>
@@ -33,15 +31,13 @@ const GiftSertifications: React.FC = () => {
               className="sertification-card"
               style={{ background: `url(${bg2})` }}
             >
-              <h3 className="title">CHEGIRMA</h3>
+              <h3 className="title">СКИДКА</h3>
               <div className="body">
                 <div className="top">
                   <h1>25%</h1>
-                  <button>Foydalanish</button>
+                  <button>Использовать</button>
                 </div>
-                <p className="desc">
-                  Barcha “Parfume” mahsulotlari uchun chegirma.
-                </p>
+                <p className="desc">Скидка на всю продукцию «Парфюмерия».</p>
                 <p className="date">21.08.2024 - 21.12.2024</p>
               </div>
             </div>
@@ -49,15 +45,13 @@ const GiftSertifications: React.FC = () => {
               className="sertification-card"
               style={{ background: `url(${bg3})` }}
             >
-              <h3 className="title">CHEGIRMA</h3>
+              <h3 className="title">СКИДКА</h3>
               <div className="body">
                 <div className="top">
                   <h1>25%</h1>
-                  <button>Foydalanish</button>
+                  <button>Использовать</button>
                 </div>
-                <p className="desc">
-                  Barcha “Parfume” mahsulotlari uchun chegirma.
-                </p>
+                <p className="desc">Скидка на всю продукцию «Парфюмерия».</p>
                 <p className="date">21.08.2024 - 21.12.2024</p>
               </div>
             </div>

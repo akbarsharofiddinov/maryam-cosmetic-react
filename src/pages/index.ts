@@ -6,3 +6,4 @@ export { default as Favourite } from "@/pages/Favourite/Favourite";
 export { default as Cart } from "@/pages/Cart/Cart";
 export { default as Order } from "@/pages/Order/Order";
 export { default as Layout } from "@/pages/Layout/Layout";
+export { default as MyOrders } from "@/pages/MyOrders/MyOrders";

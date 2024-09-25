@@ -69,6 +69,13 @@
           }
         }
       }
+
+      .price-filter {
+        .filter-inputs {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

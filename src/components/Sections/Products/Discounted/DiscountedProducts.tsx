@@ -17,7 +17,7 @@ const DiscountedProducts: React.FC = () => {
       <section className="section-discounted-products" id="discounted">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Chegirmali mahsulotlar</h3>
+            <h3 className="title">Скидочные товары</h3>
           </div>
 
           <Swiper

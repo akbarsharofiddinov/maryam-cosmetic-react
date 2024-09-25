@@ -190,7 +190,7 @@ const ProductItem: React.FC<IProps> = ({ data, quantity, inCart }: IProps) => {
 
           <div className="price-tag">
             {/* <p className="old-price">120,000 so‘m</p> */}
-            <p className="price">{formatter(data.price)} so‘m</p>
+            <p className="price">{formatter(data.price)} сумм</p>
           </div>
           <button
             className={showCountBox ? "order-btn hide" : "order-btn"}
@@ -208,7 +208,7 @@ const ProductItem: React.FC<IProps> = ({ data, quantity, inCart }: IProps) => {
                 fill="white"
               />
             </svg>
-            Savatchaga
+            В корзину
           </button>
           <div
             className={showCountBox ? "count-box show" : "count-box"}
@@ -247,7 +247,7 @@ const ProductItem: React.FC<IProps> = ({ data, quantity, inCart }: IProps) => {
                     fill="#FF1C67"
                   />
                 </svg>
-                O‘chirish
+                Удалить
               </button>
               <div className={showCountBox ? "count-box show" : "count-box"}>
                 <button className="count-decreaser" onClick={handleDecrease}>

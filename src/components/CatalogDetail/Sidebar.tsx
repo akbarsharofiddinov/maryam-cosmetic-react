@@ -1,12 +1,11 @@
 import { useGetAllCategoriesQuery } from "@/store/RTKQuery";
-import { InputNumber, InputNumberProps, Slider } from "antd";
+import { InputNumber, Slider } from "antd";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
 const Sidebar: React.FC = () => {
   const [categories, setCategories] = useState<ICategory[]>([]);
-  const [min, setMin] = useState(0);
-  const [max, setMax] = useState(0);
+  const [sliderValue, setSliderValue] = useState<number[]>([20000, 400000]);
 
   const { isSuccess, isError, isLoading, data } = useGetAllCategoriesQuery();
 
@@ -16,15 +15,11 @@ const Sidebar: React.FC = () => {
     }
   }, [isSuccess]);
 
-  const minChange: InputNumberProps["onChange"] = (newValue) => {
-    setMin(newValue as number);
-  };
-
   return (
     <div className="sidebar left">
       <div className="catalogs">
         <h3 className="title">
-          Katalog <FaAngleDown />
+          Каталог <FaAngleDown />
         </h3>
         <ul className="menu">
           {isLoading ? (
@@ -44,25 +39,32 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="price">
         <h3 className="title">
-          Narx <FaAngleDown />
+          Цена <FaAngleDown />
         </h3>
         <div className="price-filter">
           <Slider
             range
-            defaultValue={[min, max]}
-            max={1000000}
+            defaultValue={sliderValue}
+            value={sliderValue}
+            max={500000}
             step={10000}
-            onChange={(e) => {
-              setMin(e[0]);
-              setMax(e[1]);
-            }}
+            onChange={(e) => setSliderValue(e)}
           />
           <div className="filter-inputs">
             <InputNumber
               min={0}
               max={1000000}
-              value={min}
-              onChange={(e) => minChange(e!)}
+              value={sliderValue[0]}
+              onChange={(e) => setSliderValue([e || 0, sliderValue[1]])}
+              step={10000}
+            />
+
+            <InputNumber
+              min={0}
+              max={1000000}
+              value={sliderValue[1]}
+              onChange={(e) => setSliderValue([sliderValue[1], e || 0])}
+              step={10000}
             />
           </div>
         </div>

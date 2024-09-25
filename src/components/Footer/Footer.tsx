@@ -15,40 +15,40 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-columns">
             <div className="col-1 column">
-              <h4 className="title">Aksiyalar</h4>
+              <h4 className="title">Акции</h4>
               <ul className="menu">
-                <li className="menu-item">Birinchi xaridga chegirma</li>
-                <li className="menu-item">Chegirmali mahsulotlar</li>
-                <li className="menu-item">Haftalik chegirma</li>
-                <li className="menu-item">Yakshanba savdosi</li>
+                <li className="menu-item">Скидка на первую покупку</li>
+                <li className="menu-item">Скидочные товары</li>
+                <li className="menu-item">Еженедельная скидка</li>
+                <li className="menu-item">Воскресная распродажа</li>
               </ul>
             </div>
             <div className="col-2 column">
-              <h4 className="title">Filiallar</h4>
+              <h4 className="title">Филиалы</h4>
               <ul className="menu">
-                <li className="menu-item">Nukus shah, Gulzor ko‘chasi</li>
-                <li className="menu-item">Nukus shah, Katta halqa ko‘chasi</li>
-                <li className="menu-item">Nukus shah, Dildor restorani</li>
-                <li className="menu-item">Nukus shah, Nukus ko‘chasi</li>
+                <li className="menu-item">г. Нукус, улица Гульзор</li>
+                <li className="menu-item">г. Нукус, улица Большая кольцевая</li>
+                <li className="menu-item">г. Нукус, ресторан Дильдор</li>
+                <li className="menu-item">г. Нукус, улица Нукус</li>
               </ul>
             </div>
             <div className="col-3 column">
-              <h4 className="title">Batafsil</h4>
+              <h4 className="title">Подробнее</h4>
               <ul className="menu">
-                <li className="menu-item">Biz haqimizda</li>
-                <li className="menu-item">Bo‘sh ish o‘rinlari</li>
-                <li className="menu-item">Ommaviy offerta</li>
-                <li className="menu-item">Hamkorlik uchun</li>
+                <li className="menu-item">О нас</li>
+                <li className="menu-item">Вакансии</li>
+                <li className="menu-item">Публичная оферта</li>
+                <li className="menu-item">Для сотрудничества</li>
               </ul>
             </div>
             <div className="col-4 column">
               <div className="box-1 box">
-                <h4 className="title">Kontaktlar</h4>
+                <h4 className="title">Контакты</h4>
                 <p>+998 90 000-00-00</p>
                 <p>+998 90 123-45-67</p>
               </div>
               <div className="box-2 box">
-                <h4 className="title">Ijtimoiy tarmoqlar</h4>
+                <h4 className="title">Социальные сети</h4>
                 <div className="social-links">
                   <div className="instagram">
                     <svg

@@ -45,7 +45,7 @@ const Cart: React.FC = () => {
       <div className="cart-page">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Savatcha</h3>
+            <h3 className="title">Корзина</h3>
           </div>
           <div className="cart">
             <div className="products left">
@@ -61,16 +61,16 @@ const Cart: React.FC = () => {
               ) : (
                 <div className="empty-box">
                   <Empty />
-                  <a href="/">Xaridga qaytish</a>
+                  <a href="/">Вернуться к покупкам</a>
                 </div>
               )}
             </div>
             <div className="info right">
               <h4 className="title">
-                Mahsulotlar <span>{count + " ta"}</span>
+              Продукты <span>{count + " ta"}</span>
               </h4>
               <div className="discount-box">
-                <label htmlFor="discount">Chegirma qo‘llash:</label>
+                <label htmlFor="discount">Применить скидку:</label>
                 <div className="discount-inputBox">
                   <svg
                     width="20"
@@ -95,8 +95,8 @@ const Cart: React.FC = () => {
                 </div>
               </div>
               <div className="price-box">
-                <h4 className="title">Umumiy summa</h4>
-                <p>{totalPrice} so‘m</p>
+                <h4 className="title">Общая сумма</h4>
+                <p>{totalPrice} сумм</p>
               </div>
               {totalPrice ? (
                 <button
@@ -106,7 +106,7 @@ const Cart: React.FC = () => {
                     else formationFailed();
                   }}
                 >
-                  Rasmiylashtirish
+                  Оформление
                 </button>
               ) : (
                 <button
@@ -115,7 +115,7 @@ const Cart: React.FC = () => {
                   }
                   disabled
                 >
-                  Rasmiylashtirish
+                  Оформление
                 </button>
               )}
             </div>
@@ -124,7 +124,7 @@ const Cart: React.FC = () => {
           <section className="section-recommendation">
             <div className="container">
               <div className="section-title">
-                <h3 className="title">Tavsiya qilamiz</h3>
+                <h3 className="title">Мы рекомендуем</h3>
               </div>
 
               <Swiper

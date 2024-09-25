@@ -54,8 +54,6 @@ const Order: React.FC = () => {
       full_name: fullName,
     };
 
-    console.log(postData);
-
     if (userToken) {
       try {
         const response = await axios.post(

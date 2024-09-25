@@ -12,23 +12,23 @@ const Special: React.FC = () => {
       <section className="section-special">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Siz uchun maxsus</h3>
+            <h3 className="title">Товары специально для вас</h3>
           </div>
           <div className="special-menu">
             <div className="special-box box-1">
-              <h3 className="title">Chegirmalar</h3>
+              <h3 className="title">Скидки</h3>
               <img src={special1} alt="special image" />
             </div>
             <div className="special-box box-2">
-              <h3 className="title">Yangiliklar</h3>
+              <h3 className="title">Новинки</h3>
               <img src={special2} alt="special image" />
             </div>
             <div className="special-box box-3">
-              <h3 className="title">Oylik chegirmalar</h3>
+              <h3 className="title">Месячные скидки</h3>
               <img src={special3} alt="special image" />
             </div>
             <div className="special-box box-4">
-              <h3 className="title">Maxsus takliflar</h3>
+              <h3 className="title">Специальные предложения</h3>
               <img src={special4} alt="special image" />
             </div>
           </div>

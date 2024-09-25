@@ -61,7 +61,7 @@ const Header: React.FC = () => {
                     fill="#1ABCFE"
                   />
                 </svg>
-                Nukus shahar
+                город Нукус
                 <span>
                   <FaAngleDown />
                 </span>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                     fill="#FF1C67"
                   />
                 </svg>
-                Kataloglar
+                Каталоги
               </CustomButton>
             </a>
           </div>
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                   fill="#202024"
                 />
               </svg>
-              O'zb
+              Русский
               <span>
                 <FaAngleDown />
               </span>
@@ -187,15 +187,15 @@ const Header: React.FC = () => {
                         fill="#202024"
                       />
                     </svg>
-                    Kirish
+                    Войти
                   </button>
                 </>
               )}
               {userToken.length > 0 ? (
                 <div className="menu">
-                  <a href="#">Buyurtmalarim</a>
+                  <a href="/my-orders">Мои заказы</a>
                   <button onClick={handleLogOut}>
-                    Chiqish <FiLogOut />
+                    Выйти <FiLogOut />
                   </button>
                 </div>
               ) : (

@@ -74,8 +74,8 @@ const DiscountedItem: React.FC<IProps> = ({ data }) => {
         <p className="title">{data.name.slice(0, 35) + "..."}</p>
         <span>450 ml</span>
 
-        <p className="price">{formatter(data.price)} so‘m</p>
-        <button className="order-btn">Sotib olish</button>
+        <p className="price">{formatter(data.price)} сумм</p>
+        <button className="order-btn">Купить</button>
       </div>
     </>
   );

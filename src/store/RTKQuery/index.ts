@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { url } from "inspector";
 
 type OrderReqBody = {
   address: string;
@@ -51,7 +52,19 @@ export const productAPI = createApi({
           },
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`,
+            Authorization: `Bearer ${token}`,
+          },
+        }),
+      }),
+
+      // Get history orders
+      getHistoryOrders: builder.query<IHistory[], string>({
+        query: (token) => ({
+          url: "/api/orders",
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
         }),
       }),
@@ -65,4 +78,5 @@ export const {
   useGetAllCategoriesQuery,
   useGetProductsByCategoryQuery,
   useOrderProductsMutation,
+  useGetHistoryOrdersQuery,
 } = productAPI;

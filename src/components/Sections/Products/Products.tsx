@@ -43,10 +43,10 @@ const Products: React.FC = () => {
         <div className="container">
           <div className="section-title">
             <div className="products-filter">
-              <div className="filter-box popular active">Ommabop</div>
-              <div className="filter-box new">Yangi kelgan</div>
-              <div className="filter-box special">Maxsus taklif</div>
-              <div className="filter-box monthly-discount">Oylik chegirma</div>
+              <div className="filter-box popular active">Популярные</div>
+              <div className="filter-box new">Новинки</div>
+              <div className="filter-box special">Специальное предложение</div>
+              <div className="filter-box monthly-discount">Месячная скидка</div>
             </div>
           </div>
           <div className="products">
@@ -108,7 +108,7 @@ const Products: React.FC = () => {
                   setShowAll(() => !showAll);
                 }}
               >
-                {showAll ? "Yashirish" : "Yana ko'rsatish"}
+                {showAll ? "Скрыть" : "Показать больше"}
               </button>
             </div>
           </div>

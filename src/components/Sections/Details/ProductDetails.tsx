@@ -197,7 +197,7 @@ const ProductDetails: React.FC = () => {
                     <span className="discount">-20%</span>
                   </p> */}
                     <p className="current-price">
-                      {formatter(productData?.price!) + " so'm"}
+                      {formatter(productData?.price!) + " сумм"}
                     </p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const ProductDetails: React.FC = () => {
                           fill="white"
                         />
                       </svg>
-                      Sotib olish
+                      Купить
                     </button>
                   </div>
                 ) : (
@@ -263,7 +263,7 @@ const ProductDetails: React.FC = () => {
                         fill="white"
                       />
                     </svg>
-                    Savatchaga
+                    В корзину
                   </button>
                 )}
               </div>

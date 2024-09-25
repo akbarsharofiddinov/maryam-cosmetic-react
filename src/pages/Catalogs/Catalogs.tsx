@@ -24,7 +24,7 @@ const Catalogs: React.FC = () => {
       <section className="catalog-page section-catalog">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Katalog</h3>
+            <h3 className="title">Каталог</h3>
           </div>
           <div className="catalogs-grid">
             {isLoading ? (

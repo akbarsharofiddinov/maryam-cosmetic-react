@@ -7,6 +7,7 @@ import {
   Cart,
   Order,
   Layout,
+  MyOrders,
 } from "@/pages";
 import {
   setIsError,
@@ -15,7 +16,6 @@ import {
   setProducts,
 } from "./store/Products/productSlice";
 import React, { useEffect } from "react";
-import { Footer, Header } from "@/components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
 import {
@@ -48,7 +48,7 @@ const App: React.FC = () => {
       children: [
         {
           path: "",
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "/catalogs",
@@ -74,7 +74,11 @@ const App: React.FC = () => {
           path: "/order",
           element: <Order />,
         },
-      ]
+        {
+          path: "/my-orders",
+          element: <MyOrders />,
+        },
+      ],
     },
   ]);
 
@@ -115,13 +119,10 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Header />
-
       <div style={{ marginTop: "8%" }}>
         <RouterProvider router={router} />
       </div>
 
-      <Footer />
       <ToastContainer />
     </>
   );

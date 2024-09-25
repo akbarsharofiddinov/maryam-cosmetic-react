@@ -67,26 +67,26 @@ const Signup: React.FC = () => {
       {varificationStep ? (
         <div className="auth-box varify signup">
           <form onSubmit={handleSubmit}>
-            <h3 className="title">Ro‘yhatdan o‘tish</h3>
+            <h3 className="title">Регистрация</h3>
             <div className="desc">
               <p className="user-numbee">
-                <span>+998 {userNumber}</span> raqamiga SMS Kod yuborildi
+                <span>+998 {userNumber}</span> СМС-код был отправлен на
               </p>
             </div>
 
             <Input.OTP length={5} onChange={(e) => setSMS(e)} />
 
-            <button className="get-sms">Tasdiqlash</button>
+            <button className="get-sms">Подтверждение</button>
           </form>
           <CustomButton cls="centered" type="regular">
-            Tizimga kirish
+            Вход в систему
           </CustomButton>
         </div>
       ) : (
         <div className="auth-box signup">
-          <h3 className="title">Ro‘yhatdan o‘tish</h3>
+          <h3 className="title">Регистрация</h3>
           <div className="phone-input_box">
-            <label htmlFor="phone-number">Telefon raqam</label>
+            <label htmlFor="phone-number">Номер телефона</label>
             <div
               className={userNumberValidate ? "input-box error" : "input-box"}
               style={userNumberValidate ? { border: "1px solid red" } : {}}
@@ -109,10 +109,10 @@ const Signup: React.FC = () => {
             </div>
           </div>
           <button className="get-sms" onClick={getSMSCode}>
-            Kodni olish
+            Получить код
           </button>
 
-          <button className="to-login">Tizimga kirish</button>
+          <button className="to-login">Вход в систему</button>
         </div>
       )}
     </>

@@ -7,13 +7,13 @@ const NavigationBar: React.FC = () => {
     <>
       <div className="navigation-bar">
         <Link to={"/"} className="page_link">
-          Bosh sahifa <FaAngleRight />
+          Главная страница <FaAngleRight />
         </Link>
-        <Link to={'/'} className="page_link">
-          Chegirmalar <FaAngleRight />
+        <Link to={"/"} className="page_link">
+          Скидки <FaAngleRight />
         </Link>
         <Link to={"#"} className="page_link">
-          Suvga asoslangan rangli lak EKO, 40 ta rang
+          Лак цветной на водной основе ЭКО, 40 цветов.
         </Link>
       </div>
     </>

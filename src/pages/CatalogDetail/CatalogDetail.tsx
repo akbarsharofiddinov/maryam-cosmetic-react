@@ -23,7 +23,7 @@ const CatalogDetail: React.FC = () => {
         <div className="container">
           <NavigationBar />
           <div className="section-title">
-            <h3 className="title">Makiyaj</h3>
+            <h3 className="title">Макияж</h3>
           </div>
 
           <div className="main-content">

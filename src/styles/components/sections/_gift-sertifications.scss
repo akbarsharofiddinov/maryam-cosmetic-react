@@ -1,0 +1,115 @@
+.gift-sertifications {
+  .section-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 413px));
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px 0;
+
+    .sertification-card {
+      background-repeat: no-repeat;
+      height: 190px;
+      width: 413px;
+      border-radius: 25px;
+      position: relative;
+
+      display: flex;
+      justify-content: end;
+
+      &:first-child {
+        background: url("../../../images/gift-sertifications/card-bg-1.svg");
+      }
+
+      &:nth-child(2) {
+        background: url("../../../images/sertification-card/card-bg-2.svg");
+
+        .body {
+          .top {
+            h1 {
+              color: #1abcfe;
+            }
+
+            button {
+              background-color: #1abcfe;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        background: url("../../../images/sertification-card/card-bg-3.svg");
+
+        .title {
+          color: #000;
+        }
+
+        .body {
+          .top {
+            h1 {
+              color: #000;
+            }
+
+            button {
+              background-color: #ffe70d;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .title {
+        position: absolute;
+        color: #fff;
+        left: 0;
+        top: 50%;
+        transform: rotate(-90deg) translateX(10%);
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        max-width: 300px;
+        padding: 10px;
+
+        .desc {
+          opacity: 0.5;
+        }
+
+        .date {
+          background-color: #f1f3f6;
+          padding: 10px;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin: 15px 0 5px 0;
+
+          h1 {
+            font-size: 40px;
+            font-weight: 800;
+            color: $main-bg;
+          }
+
+          button {
+            background-color: $main-bg;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

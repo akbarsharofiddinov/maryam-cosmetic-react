@@ -1,0 +1,34 @@
+// Variables
+@import "./common/variables";
+// Default Styles
+@import "./common/default";
+// UI
+@import "./UI/select";
+@import "./UI/button";
+@import "./UI/modal";
+
+// Responsive
+@import "./common/responsive";
+
+// Components
+@import "./components/header";
+@import "./components/banner";
+@import "./components/footer";
+@import "./components/Auth/signup";
+
+// Sections
+@import "./components/sections/discounted-products";
+@import "./components/sections/special";
+@import "./components/sections/catalog";
+@import "./components/sections/products";
+@import "./components/announcement";
+@import "./components/sections/gift-sertifications";
+
+@import "./pages/catalogSidebar/CatalogDetails";
+@import "./pages/catalogSidebar/catalogSidebar";
+
+// Pages
+@import "./pages/catalogs";
+@import "./pages/details/details";
+@import "./pages/cart/cart";
+@import "./pages/Order/order";

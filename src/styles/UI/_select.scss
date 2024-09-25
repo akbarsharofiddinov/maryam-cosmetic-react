@@ -1,0 +1,68 @@
+$background-color_1: #fff;
+$background-color_2: #e8eaee;
+
+.select-item {
+  position: relative;
+  .selected {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #e8eaee;
+    padding: 15px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .menu {
+    background-color: $background-color_1;
+    border: 1px solid #e8eaee;
+    z-index: 10;
+    border-radius: 12px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-25%);
+    transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+    .item {
+      padding: 10px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: $background-color_2;
+      }
+    }
+  }
+  &:hover {
+    .menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+  }
+
+  &.location-select {
+    position: relative;
+
+    .selected {
+      transition: background-color 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu {
+      position: absolute;
+      background-color: #fff;
+    }
+
+    &:hover {
+      .selected {
+        background-color: $main-bg;
+        color: #fff;
+      }
+    }
+  }
+}

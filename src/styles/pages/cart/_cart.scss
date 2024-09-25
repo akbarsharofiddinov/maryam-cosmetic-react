@@ -1,0 +1,208 @@
+.cart-page {
+  .cart {
+    display: flex;
+    align-items: start;
+    margin-top: 20px;
+    gap: 15px;
+
+    .products.left {
+      flex: 65%;
+      display: flex;
+      flex-direction: column;
+      max-height: 700px;
+      overflow: auto;
+      padding-right: 10px;
+
+      &:hover::-webkit-scrollbar {
+        background-color: #ebebeb;
+      }
+
+      &:hover::-webkit-scrollbar-thumb {
+        background-color: #ff5b91;
+      }
+
+      &::-webkit-scrollbar {
+        width: 10px !important;
+        background-color: inherit;
+        border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: inherit;
+        border-radius: 100px;
+      }
+
+      .product-box {
+        padding: 20px 10px 20px 20px;
+        display: flex;
+        gap: 20px;
+        box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.04);
+
+        .title {
+          font-size: 22px;
+        }
+
+        .product-image_box {
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+        .body {
+          width: 100%;
+        }
+
+        .favourite-btn {
+          display: none;
+        }
+
+        .buttons {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+
+          .count-box {
+            width: 285px;
+          }
+
+          .cart-delete_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fff0f5;
+            color: $main-bg;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 20;
+
+            transition: background-color 0.4s, color 0.4s;
+
+            &:hover {
+              background-color: $main-bg;
+              color: #fff;
+
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .empty-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 300px;
+
+        a {
+          background-color: transparent;
+          padding: 20px;
+          border-radius: 100px;
+          font-size: 16px;
+          width: 200px;
+          text-align: center;
+          border: 1px solid #ddd;
+
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #e6e6e6;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 35%;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 25px;
+      background-color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .discount-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .discount-inputBox {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: #f1f3f6;
+          padding: 0 15px 0 20px;
+
+          border-radius: 100px;
+
+          input {
+            background-color: transparent;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .price-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      .formation-btn {
+        width: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: $main-bg;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        border-radius: 100px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        &.disable {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

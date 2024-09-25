@@ -1,0 +1,154 @@
+/* Header Left content */
+/* Header right content */
+header {
+  box-shadow: 1px 15px 15px rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  .logo {
+    img {
+      width: 80px;
+      height: 80px;
+      flex: 20%;
+    }
+  }
+
+  .left-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 40%;
+
+    .catalogs-btn_link {
+      background-color: transparent !important;
+
+      &:hover {
+        background-color: $main-bg !important;
+      }
+    }
+  }
+  .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    flex: 40%;
+
+    .header-profile {
+      position: relative;
+
+      .customButton {
+        padding: 15px 18px;
+      }
+
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        min-width: 120px;
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: opacity 0.3, visibility 0.3s;
+
+        a {
+          font-size: 16px;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+
+        button {
+          font-size: 16px;
+          padding: 15px;
+          background-color: transparent;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 10px;
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+
+      &:hover {
+        .menu {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+
+    .icon {
+      border: 1px solid #e8eaee;
+      padding: 15px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: color 0.2s, background-color 0.2s;
+
+      .count {
+        background-color: $main-bg;
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: $main-bg;
+
+        .count {
+          background-color: #fff;
+          color: #000;
+        }
+
+        svg {
+          fill: #fff !important;
+          path {
+            fill: #fff !important;
+          }
+        }
+      }
+
+      &.favourite-icon {
+        font-size: 20px;
+      }
+    }
+  }
+}

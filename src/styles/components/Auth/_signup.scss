@@ -1,0 +1,102 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  gap: 20px;
+
+  .title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .phone-input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    .phone-number {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .input-box {
+      background-color: #f1f3f6;
+      border-radius: 100px;
+      padding: 16px;
+
+      &.error {
+        position: relative;
+        &::after {
+          content: "Iltimos telefon raqam kiriting";
+          position: absolute;
+          top: 120%;
+          left: 20px;
+          color: red;
+        }
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        padding-left: 10px;
+        width: 80%;
+      }
+    }
+  }
+
+  .get-sms {
+    background-color: $main-bg;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 18px;
+    border-radius: 100px;
+  }
+
+  .to-login {
+    background-color: #f1f3f6;
+    font-size: 18px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &.varify {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .desc {
+        font-size: 22px;
+        font-weight: 600;
+        color: #20202480;
+
+        span {
+          color: #000;
+          font-weight: 700;
+        }
+      }
+
+      input {
+        width: 80px !important;
+        height: 60px !important;
+        font-size: 18px;
+        border-radius: 100px;
+        background-color: #f1f3f6;
+        border: none;
+      }
+    }
+  }
+}

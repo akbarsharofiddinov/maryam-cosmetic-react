@@ -1,0 +1,47 @@
+.announcement-banner {
+  background-color: $main-bg;
+
+  .section-inner {
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      p {
+        font-size: 26px;
+        font-weight: 600;
+
+        span {
+          color: #fff;
+        }
+      }
+
+      h3 {
+        font-size: 36px;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+
+    .images {
+      display: flex;
+
+      img {
+        &:nth-child(2) {
+          transform: translateX(-32%);
+        }
+
+        &:nth-child(3) {
+          transform: translateX(-64%);
+        }
+
+        &:nth-child(4) {
+          transform: translateX(-96%);
+        }
+      }
+    }
+  }
+}

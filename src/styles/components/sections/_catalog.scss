@@ -1,0 +1,52 @@
+.section-catalog {
+  .catalog-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 525px));
+    gap: 25px;
+    margin: 40px 0;
+
+    .catalog-box {
+      background-color: #fff;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      position: relative;
+      border-radius: 25px;
+      cursor: pointer;
+
+      transition: box-shadow 0.3s;
+
+      .title {
+        font-weight: 600;
+        font-size: 32px;
+        margin: 0 0 20px 20px;
+        color: #000;
+      }
+
+      &:last-child {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        font-size: 24px;
+      }
+
+      &:hover {
+        box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.02);
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

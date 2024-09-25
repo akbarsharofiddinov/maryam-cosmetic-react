@@ -85,7 +85,6 @@ const ProductDetails: React.FC = () => {
       if (item.id === productData?.id) setIsFavourite(true);
     });
   }, [favProducts, productData]);
-  
 
   return (
     <>
@@ -180,16 +179,18 @@ const ProductDetails: React.FC = () => {
               <div className="info">
                 <h3 className="title">{productData?.name}</h3>
                 <div className="about-product">
-                  <h4>Mahsulot haqida qisqacha:</h4>
+                  <h4>Описание продукта:</h4>
                   <ul>
-                    <li>Hajmi: 10ml</li>
-                    <li>Suv bazasi</li>
-                    <li>Tez quriydi</li>
-                    <li>Xavfsiz va toksik emas</li>
-                    <li>Og'ir metallarni o'z ichiga olmaydi</li>
+                    <li>Подходит для всех типов кожи/волос</li>
                     <li>
-                      Homilador ayollar va bolalar uchun ishlatilishi mumkin
+                      Разработан с использованием высококачественных
+                      ингредиентов
                     </li>
+                    <li>Продукты прошли дерматологические испытания</li>
+                    <li>Идеально для ежедневного ухода</li>
+                    <li>Легкий в применении и впитывании</li>
+                    <li>Подходит для чувствительной кожи/волос</li>
+                    <li>Эффективное увлажнение и защита</li>
                   </ul>
                   <div className="price-tag">
                     {/* <p className="old-price">

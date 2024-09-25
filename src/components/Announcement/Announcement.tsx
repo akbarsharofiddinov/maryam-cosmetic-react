@@ -14,10 +14,9 @@ const Announcement: React.FC = () => {
           <div className="section-inner">
             <div className="left">
               <p>
-                <span>“Yakshanba”</span> kuni barcha soch parvarish
-                mahsulotlariga
+                <span>В воскресенье</span> скидка <span>25%</span> на все средства по уходу
+                за волосами.
               </p>
-              <h3>-25% chegirma</h3>
             </div>
             <div className="images">
               <img src={announcement1} alt="Announcement Images" />

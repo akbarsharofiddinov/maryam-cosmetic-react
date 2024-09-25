@@ -34,7 +34,7 @@ const Details: React.FC = () => {
           <section className="section-recommendation">
             <div className="container">
               <div className="section-title">
-                <h3 className="title">Tavsiya qilamiz</h3>
+                <h3 className="title">Рекомендуем</h3>
               </div>
 
               <Swiper

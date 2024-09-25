@@ -2,6 +2,14 @@
   .banner-images {
     display: flex;
     gap: 25px;
+
+    img {
+      width: 305px;
+
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
   }
 
   // Mobile - swiper

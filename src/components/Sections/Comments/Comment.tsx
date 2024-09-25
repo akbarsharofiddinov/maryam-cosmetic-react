@@ -8,7 +8,7 @@ const Comment: React.FC = () => {
       <section className="section-comments">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Sharhlar</h3>
+            <h3 className="title">Отзывы</h3>
           </div>
           <div className="comments">
             <div className="comment-box">
@@ -82,8 +82,8 @@ const Comment: React.FC = () => {
                 </div>
               </div>
               <p className="comment">
-                Menga lak juda yoqdi, u tez quriydi, boy rangga ega va
-                o'chmaydi.
+                Мне очень понравился лак, он быстро сохнет, имеет насыщенный
+                цвет и не смывается.
               </p>
             </div>
             <div className="comment-box">
@@ -157,8 +157,8 @@ const Comment: React.FC = () => {
                 </div>
               </div>
               <p className="comment">
-                Menga lak juda yoqdi, u tez quriydi, boy rangga ega va
-                o'chmaydi.
+                Мне очень понравился лак, он быстро сохнет, имеет насыщенный
+                цвет и не смывается.
               </p>
             </div>
             <div className="comment-box">
@@ -232,8 +232,8 @@ const Comment: React.FC = () => {
                 </div>
               </div>
               <p className="comment">
-                Menga lak juda yoqdi, u tez quriydi, boy rangga ega va
-                o'chmaydi.
+                Мне очень понравился лак, он быстро сохнет, имеет насыщенный
+                цвет и не смывается.
               </p>
             </div>
           </div>

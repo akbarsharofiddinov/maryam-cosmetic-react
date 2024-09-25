@@ -4,6 +4,7 @@ import { useGetProductsByCategoryQuery } from "@/store/RTKQuery";
 
 const CatalogDetail: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
+  const [sliderValue, setSliderValue] = useState<number[]>([20000, 100000]);
   const params = Number.parseInt(window.location.search.slice(4));
   const { isLoading, isError, isSuccess, data } = useGetProductsByCategoryQuery(
     {
@@ -15,7 +16,7 @@ const CatalogDetail: React.FC = () => {
     if (isSuccess) {
       setProducts(data.data);
     }
-  }, [isSuccess]);
+  }, [isSuccess, sliderValue]);
 
   return (
     <>
@@ -27,16 +28,24 @@ const CatalogDetail: React.FC = () => {
           </div>
 
           <div className="main-content">
-            <CatalogSidebar />
+            <CatalogSidebar
+              sliderValue={sliderValue}
+              setSliderValue={setSliderValue}
+            />
             <div className="products right">
               {isLoading ? (
                 <div>Lodaing</div>
               ) : isError ? (
                 <div>Erro</div>
               ) : (
-                products.map((product, index) => (
-                  <ProductItem key={index} data={product} />
-                ))
+                products.map((product, index) =>
+                  product.price >= sliderValue[0] &&
+                  product.price <= sliderValue[1] ? (
+                    <ProductItem key={index} data={product} />
+                  ) : (
+                    ""
+                  )
+                )
               )}
             </div>
           </div>

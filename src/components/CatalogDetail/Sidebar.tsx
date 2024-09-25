@@ -3,9 +3,13 @@ import { InputNumber, Slider } from "antd";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
-const Sidebar: React.FC = () => {
+interface IProps {
+  sliderValue: number[];
+  setSliderValue: React.Dispatch<React.SetStateAction<number[]>>;
+}
+
+const Sidebar: React.FC<IProps> = ({ setSliderValue, sliderValue }) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
-  const [sliderValue, setSliderValue] = useState<number[]>([20000, 400000]);
 
   const { isSuccess, isError, isLoading, data } = useGetAllCategoriesQuery();
 

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 
 // Catalog images
 import catalog1 from "@/images/catalog/image-1.png";
+import catalog2 from "@/images/catalog/image-2.png";
+import catalog3 from "@/images/catalog/image-3.png";
+import catalog4 from "@/images/catalog/image-4.png";
 import { useGetAllCategoriesQuery } from "@/store/RTKQuery";
 
 const Catalog: React.FC = () => {
@@ -52,7 +55,15 @@ const Catalog: React.FC = () => {
                     className="catalog-box"
                   >
                     <h3 className="title">{catalog.name}</h3>
-                    <img src={catalog1} alt="" />
+                    {index === 0 ? (
+                      <img src={catalog1} alt="" />
+                    ) : index === 1 ? (
+                      <img src={catalog2} alt="" />
+                    ) : index === 2 ? (
+                      <img src={catalog3} alt="" />
+                    ) : (
+                      <img src={catalog4} alt="" />
+                    )}
                   </a>
                 ) : (
                   ""

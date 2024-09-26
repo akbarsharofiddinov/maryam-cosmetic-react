@@ -167,6 +167,7 @@
       gap: 10px;
       padding: 10px 20px;
       min-width: 300px !important;
+      position: relative;
 
       .img-box {
         img {
@@ -209,8 +210,6 @@
           }
         }
       }
-
-      position: relative;
 
       .discount {
         font-size: 12px;

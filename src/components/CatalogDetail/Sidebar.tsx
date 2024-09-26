@@ -33,7 +33,7 @@ const Sidebar: React.FC<IProps> = ({ setSliderValue, sliderValue }) => {
           ) : (
             categories.map((category, index) => (
               <li className="menu-item" key={`${index}_${category.id}`}>
-                <a href={`/catalog-detail/?id=${category.id}`}>
+                <a href={`/catalog-details/?id=${category.id}`}>
                   {category.name}
                 </a>
               </li>

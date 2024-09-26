@@ -6,6 +6,9 @@ import React, { useEffect, useState } from "react";
 // Catalog images
 
 import category1 from "@/images/catalog/image-1.png";
+import category2 from "@/images/catalog/image-2.png";
+import category3 from "@/images/catalog/image-3.png";
+import category4 from "@/images/catalog/image-4.png";
 
 const Catalogs: React.FC = () => {
   const [categoriesData, setCategoriesData] = useState<ICategory[]>([]);
@@ -36,7 +39,17 @@ const Catalogs: React.FC = () => {
                 <div className="catalog" key={index}>
                   <a href={`/catalog-details/?id=${category.id}`}></a>
                   {category.name}
-                  <img src={category1} alt="catalog image" />
+                  {index % 4 === 0 ? (
+                    <img src={category4} alt="catalog image" />
+                  ) : index % 3 === 0 && index % 5 === 0 ? (
+                    <img src={category3} alt="catalog image" />
+                  ) : index % 2 === 0 ? (
+                    <img src={category2} alt="catalog image" />
+                  ) : index % 5 === 1 || index % 3 === 1 ? (
+                    <img src={category1} alt="catalog image" />
+                  ) : (
+                    <img src={category3} alt="" />
+                  )}
                 </div>
               ))
             ) : (

@@ -12,7 +12,7 @@ const Special: React.FC = () => {
       <section className="section-special">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Товары специально для вас</h3>
+            <h3 className="title">Специально для вас</h3>
           </div>
           <div className="special-menu">
             <div className="special-box box-1">

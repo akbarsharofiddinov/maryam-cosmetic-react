@@ -36,10 +36,13 @@ const Order: React.FC = () => {
   // const [postOrder, result] = useOrderProductsMutation({});
 
   const formationFailed = () =>
-    toast("Tizimda ro'yxatdan o'tmagansiz! Ro'yxatdan o'tish uchun bosing.", {
-      type: "error",
-      onClick: () => dispatch(setModal(true)),
-    });
+    toast(
+      "Вы не зарегистрированы в системе! Нажмите, чтобы зарегистрироваться.",
+      {
+        type: "error",
+        onClick: () => dispatch(setModal(true)),
+      }
+    );
 
   async function handleSendOrder(e: React.FormEvent<HTMLFormElement>) {
     setLocation("Город Нукус");
@@ -69,7 +72,7 @@ const Order: React.FC = () => {
 
         if (response.status === 201) {
           toast(
-            "Buyurtma muvofaqqiyatli yuborildi! Bosh sahifaga o'tish uchun bosing.",
+            "Заказ успешно отправлен! Нажмите, чтобы перейти на главная страницу.",
             {
               type: "success",
               onClick: () => navigate("/"),
@@ -79,7 +82,7 @@ const Order: React.FC = () => {
           localStorage.removeItem("cart");
           dispatch(setCartProducts([]));
         } else {
-          toast("Buyurtma berishda xatolik yuz berdi.", {
+          toast("При оформлении заказа произошла ошибка.", {
             type: "error",
             onClose: () => navigate("/"),
           });

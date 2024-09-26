@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "@/store/hooks/hooks";
+import { useAppDispatch } from "@/store/hooks/hooks";
 import {
   setCategories,
   setCurrentCategoryName,
@@ -16,7 +16,7 @@ import category4 from "@/images/catalog/image-4.png";
 const Catalogs: React.FC = () => {
   const [categoriesData, setCategoriesData] = useState<ICategory[]>([]);
   const { data, isLoading, isError, isSuccess } = useGetAllCategoriesQuery();
-  const { categories } = useAppSelector((state) => state.products);
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {

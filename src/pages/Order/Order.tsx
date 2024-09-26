@@ -106,18 +106,18 @@ const Order: React.FC = () => {
       <div className="order-page">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Buyurtmani rasmiylashtirish</h3>
+            <h3 className="title">Оформление заказа</h3>
           </div>
           <form onSubmit={handleSendOrder}>
             <div className="left">
               <div className="info-form">
-                <h4 className="title">Buyurtmani qabul qiluvchi</h4>
+                <h4 className="title">Получатель заказа</h4>
                 <div className="input-boxes">
                   <div className="input-box">
-                    <label htmlFor="location">Tuman markazi</label>
+                    <label htmlFor="location">Район</label>
                     <CustomSelect cls="location-select">
                       <div className="selected">
-                        Nukus shahar
+                        Город Нукус
                         <span>
                           <IoIosArrowDown />
                         </span>
@@ -133,7 +133,7 @@ const Order: React.FC = () => {
                     </CustomSelect>
                   </div>
                   <div className="input-box">
-                    <label htmlFor="full-name">Ism Familiya</label>
+                    <label htmlFor="full-name">Имя Фамилия</label>
                     <input
                       type="text"
                       name="full-name"
@@ -144,7 +144,7 @@ const Order: React.FC = () => {
                     />
                   </div>
                   <div className="input-box ">
-                    <label htmlFor="phone">Telefon raqam</label>
+                    <label htmlFor="phone">Номер телефона</label>
                     <div
                       className={
                         userNumberValidate
@@ -191,16 +191,15 @@ const Order: React.FC = () => {
                     />
                   </svg>
                   <p>
-                    Siz ko'rsatgan telefon raqamiga buyurtmangiz holati haqida
-                    bildirishnoma yuboramiz. Yetkazib berish muddatini
-                    aniqlashtirish uchun kurer siz bilan telefon orqali
-                    bog'lanadi.
+                    На указанный вами номер телефона мы отправим уведомление о
+                    состоянии вашего заказа. Курьер свяжется с вами по телефону,
+                    чтобы уточнить срок доставки.
                   </p>
                 </div>
               </div>
 
               <div className="method-payments">
-                <h4 className="title">To'lov usuli</h4>
+                <h4 className="title">Способ оплаты</h4>
                 <div className="methods">
                   <div className="method payme">
                     <div className="top">
@@ -214,7 +213,7 @@ const Order: React.FC = () => {
                       <label htmlFor="method-payme"></label>
                     </div>
                     <div className="desc">
-                      Payme ilovasi orqali tez va oson to‘lovni amalga oshiring.{" "}
+                      Совершите быстрый и удобный платеж через приложение Payme.
                     </div>
                   </div>
                   <div className="method click">
@@ -229,8 +228,8 @@ const Order: React.FC = () => {
                       <label htmlFor="method-click"></label>
                     </div>
                     <div className="desc">
-                      Click-up ilovasi orqali tez va oson to‘lovni amalga
-                      oshiring.
+                      Совершите быстрый и удобный платеж через приложение
+                      Click-up.
                     </div>
                   </div>
                   <div className="method uzum">
@@ -245,8 +244,8 @@ const Order: React.FC = () => {
                       <label htmlFor="method-uzum"></label>
                     </div>
                     <div className="desc">
-                      Uzum nasiya ilovasi orqali halol muddatli to‘lovga xarid
-                      qiling.
+                      Совершите покупку в рассрочку через приложение Uzum Nasiya
+                      на условиях халяль.
                     </div>
                   </div>
                   <div className="method cash">
@@ -272,8 +271,8 @@ const Order: React.FC = () => {
                       <label htmlFor="method-cash"></label>
                     </div>
                     <div className="desc">
-                      <h4>Naqd</h4>
-                      Maxsulotni qabul qilganda to‘lov qilish
+                      <h4>Наличные</h4>
+                      Оплата при получении товара
                     </div>
                   </div>
                 </div>
@@ -282,10 +281,10 @@ const Order: React.FC = () => {
 
             <div className="info right">
               <h4 className="title">
-                Mahsulotlar <span>{count + " ta"}</span>
+                Товары <span>{count} шт.</span>
               </h4>
               <div className="discount-box">
-                <label htmlFor="discount">Chegirma qo‘llash:</label>
+                <label htmlFor="discount">Применить скидку:</label>
                 <div className="discount-inputBox">
                   <svg
                     width="20"
@@ -303,7 +302,7 @@ const Order: React.FC = () => {
                     type="text"
                     name="discount"
                     id="discount"
-                    placeholder="Promo kod"
+                    placeholder="Промо-код"
                     value={discount}
                     onChange={(e) => {
                       setDiscount(e.target.value);
@@ -317,11 +316,11 @@ const Order: React.FC = () => {
                 </div>
               </div>
               <div className="price-box">
-                <h4 className="title">Umumiy summa</h4>
-                <p>{totalPrice} so‘m</p>
+                <h4 className="title">Общая сумма</h4>
+                <p>{totalPrice} сум</p>
               </div>
               {totalPrice ? (
-                <button className="formation-btn">Rasmiylashtirish</button>
+                <button className="formation-btn">Оформление заказа</button>
               ) : (
                 <button
                   className={
@@ -329,14 +328,14 @@ const Order: React.FC = () => {
                   }
                   disabled
                 >
-                  Rasmiylashtirish
+                  Оформление заказа
                 </button>
               )}
 
               <div className="desc">
-                Buyurtma berish orqali siz Maxfiylik shartnomasi va
-                Uzum foydalanuvchi shartnomasiga muvofiq shaxsiy ma'lumotlarni
-                qayta ishlashga rozilik bildirasiz 
+                Оформляя заказ, вы соглашаетесь на обработку персональных данных
+                в соответствии с Политикой конфиденциальности и Пользовательским
+                соглашением Uzum.
               </div>
             </div>
           </form>

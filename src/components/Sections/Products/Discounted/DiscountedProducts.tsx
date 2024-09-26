@@ -23,6 +23,11 @@ const DiscountedProducts: React.FC = () => {
           <Swiper
             slidesPerView={"auto"}
             spaceBetween={30}
+            breakpoints={{
+              540: {
+                spaceBetween: 15,
+              },
+            }}
             freeMode={true}
             mousewheel={true}
             modules={[FreeMode, Pagination]}

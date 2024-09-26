@@ -67,7 +67,7 @@ const Cart: React.FC = () => {
             </div>
             <div className="info right">
               <h4 className="title">
-              Продукты <span>{count + " ta"}</span>
+                Продукты <span>{count}</span>
               </h4>
               <div className="discount-box">
                 <label htmlFor="discount">Применить скидку:</label>

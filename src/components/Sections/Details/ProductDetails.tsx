@@ -144,12 +144,12 @@ const ProductDetails: React.FC = () => {
                   </svg>
 
                   <p>
-                    Reyting: <span>(4,5)</span>
+                    Рейтинг: <span>(4,5)</span>
                   </p>
                 </div>
                 <div className="comments">
                   <p>
-                    Sharhlar: <span>(268 ta)</span>
+                    Комментарии: <span>(268)</span>
                   </p>
                 </div>
                 <div className="orders">
@@ -165,7 +165,7 @@ const ProductDetails: React.FC = () => {
                       fill="#0ACF83"
                     />
                   </svg>
-                  <p>5 200 ta buyurtma</p>
+                  <p>5 200 шт. заказов</p>
                 </div>
                 <div className="favourite" onClick={handleAddFavouriteProduct}>
                   {isFavourite ? (
@@ -173,7 +173,7 @@ const ProductDetails: React.FC = () => {
                   ) : (
                     <FaRegHeart />
                   )}
-                  <p>Sevimli</p>
+                  <p>Избранное</p>
                 </div>
               </div>
               <div className="info">

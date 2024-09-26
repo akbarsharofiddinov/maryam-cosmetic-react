@@ -10,7 +10,7 @@ const Favourite: React.FC = () => {
       <div className="favourite-page">
         <div className="container">
           <div className="section-title">
-            <h3 className="title">Sevimli</h3>
+            <h3 className="title">Избранное</h3>
           </div>
           <div className="favourites-box products">
             {products.length > 0 ? (
@@ -20,7 +20,7 @@ const Favourite: React.FC = () => {
             ) : (
               <div className="empty-box">
                 <Empty />
-                <a href="/">Xaridga qaytish</a>
+                <a href="/">Вернуться к покупкам</a>
               </div>
             )}
           </div>

@@ -9,6 +9,7 @@ interface IState {
   isLoading: boolean;
   isError: boolean;
   isSuccess: boolean;
+  currentCategoryName: string;
 }
 
 const initialState: IState = {
@@ -20,6 +21,7 @@ const initialState: IState = {
   isLoading: false,
   isError: false,
   isSuccess: false,
+  currentCategoryName: "",
 };
 
 export const productSlice = createSlice({
@@ -57,6 +59,10 @@ export const productSlice = createSlice({
     setIsSuccess: (state, action: PayloadAction<boolean>) => {
       state.isSuccess = action.payload;
     },
+
+    setCurrentCategoryName: (state, action: PayloadAction<string>) => {
+      state.currentCategoryName = action.payload;
+    },
   },
 });
 
@@ -68,7 +74,8 @@ export const {
   setLastPage,
   setIsLoading,
   setIsError,
-  setIsSuccess
+  setIsSuccess,
+  setCurrentCategoryName,
 } = productSlice.actions;
 
 export default productSlice.reducer;

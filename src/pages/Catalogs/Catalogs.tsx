@@ -1,5 +1,8 @@
-import { useAppDispatch } from "@/store/hooks/hooks";
-import { setCategories } from "@/store/Products/productSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks/hooks";
+import {
+  setCategories,
+  setCurrentCategoryName,
+} from "@/store/Products/productSlice";
 import { useGetAllCategoriesQuery } from "@/store/RTKQuery";
 import React, { useEffect, useState } from "react";
 
@@ -12,8 +15,9 @@ import category4 from "@/images/catalog/image-4.png";
 
 const Catalogs: React.FC = () => {
   const [categoriesData, setCategoriesData] = useState<ICategory[]>([]);
-  const dispatch = useAppDispatch();
   const { data, isLoading, isError, isSuccess } = useGetAllCategoriesQuery();
+  const { categories } = useAppSelector((state) => state.products);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (isSuccess) {
@@ -37,7 +41,13 @@ const Catalogs: React.FC = () => {
             ) : isSuccess ? (
               categoriesData.map((category, index) => (
                 <div className="catalog" key={index}>
-                  <a href={`/catalog-details/?id=${category.id}`}></a>
+                  <a
+                    href={`/catalog-details/?id=${category.id}`}
+                    onClick={() => {
+                      localStorage.setItem("current-category", category.name);
+                      dispatch(setCurrentCategoryName(category.name));
+                    }}
+                  ></a>
                   {category.name}
                   {index % 4 === 0 ? (
                     <img src={category4} alt="catalog image" />

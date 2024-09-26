@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { CatalogSidebar, NavigationBar, ProductItem } from "@/components";
 import { useGetProductsByCategoryQuery } from "@/store/RTKQuery";
+import { useAppDispatch, useAppSelector } from "@/store/hooks/hooks";
+import { setCurrentCategoryName } from "@/store/Products/productSlice";
 
 const CatalogDetail: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [sliderValue, setSliderValue] = useState<number[]>([20000, 300000]);
+
+  const { currentCategoryName } = useAppSelector((state) => state.products);
+
   const params = Number.parseInt(window.location.search.slice(4));
+  const dispatch = useAppDispatch();
+
   const { isLoading, isError, isSuccess, data } = useGetProductsByCategoryQuery(
     {
       categoryId: params,
@@ -18,13 +25,19 @@ const CatalogDetail: React.FC = () => {
     }
   }, [isSuccess, sliderValue]);
 
+  useEffect(() => {
+    dispatch(
+      setCurrentCategoryName(localStorage.getItem("current-category") + "")
+    );
+  }, [data]);
+
   return (
     <>
       <div className="catalog-detail">
         <div className="container">
           <NavigationBar />
           <div className="section-title">
-            <h3 className="title">Макияж</h3>
+            <h3 className="title">{currentCategoryName}</h3>
           </div>
 
           <div className="main-content">

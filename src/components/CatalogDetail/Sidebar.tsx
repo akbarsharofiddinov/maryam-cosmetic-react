@@ -1,3 +1,4 @@
+import { useAppSelector } from "@/store/hooks/hooks";
 import { useGetAllCategoriesQuery } from "@/store/RTKQuery";
 import { InputNumber, Slider } from "antd";
 import React, { useEffect, useState } from "react";
@@ -10,6 +11,8 @@ interface IProps {
 
 const Sidebar: React.FC<IProps> = ({ setSliderValue, sliderValue }) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
+
+  const { currentCategoryName } = useAppSelector((state) => state.products);
 
   const { isSuccess, isError, isLoading, data } = useGetAllCategoriesQuery();
 
@@ -33,7 +36,17 @@ const Sidebar: React.FC<IProps> = ({ setSliderValue, sliderValue }) => {
           ) : (
             categories.map((category, index) => (
               <li className="menu-item" key={`${index}_${category.id}`}>
-                <a href={`/catalog-details/?id=${category.id}`}>
+                <a
+                  href={`/catalog-details/?id=${category.id}`}
+                  onClick={() => {
+                    localStorage.setItem("current-category", category.name);
+                  }}
+                  style={
+                    currentCategoryName === category.name
+                      ? { color: "#ff1c67", opacity: 1 }
+                      : {}
+                  }
+                >
                   {category.name}
                 </a>
               </li>

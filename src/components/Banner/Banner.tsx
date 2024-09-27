@@ -4,6 +4,7 @@ import React from "react";
 import banner1 from "@/images/banner/Image 1.png";
 import banner2 from "@/images/banner/Image 2.png";
 import banner3 from "@/images/banner/Image 3.png";
+import mobileBanner from "@/images/banner/mobile/Image 1.png";
 // Brands
 import brand1 from "@/images/brands/LOGO-1.png";
 import brand2 from "@/images/brands/LOGO-2.png";
@@ -13,7 +14,7 @@ import brand5 from "@/images/brands/LOGO-5.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Required Swiper modules
-import { Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const Banner: React.FC = () => {
   return (
@@ -47,17 +48,26 @@ const Banner: React.FC = () => {
           }
 
           <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            loop={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
             pagination={true}
-            modules={[Pagination]}
+            modules={[EffectCoverflow, Pagination]}
             className="banner-swiper"
-            slidesPerView={1}
-            spaceBetween={0}
           >
             <SwiperSlide>
               <img src={banner1} alt="banner image" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={banner2} alt="banner image" />
+              <img src={mobileBanner} alt="banner image" />
             </SwiperSlide>
             <SwiperSlide>
               <img src={banner3} alt="banner image" />

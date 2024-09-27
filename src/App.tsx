@@ -119,7 +119,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <div style={{ marginTop: "8%" }}>
+      <div style={{ marginTop: "8%" }} className="app-wrapper">
         <RouterProvider router={router} />
       </div>
 

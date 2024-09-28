@@ -15,6 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Required Swiper modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
+// Styles
 
 const Banner: React.FC = () => {
   return (
@@ -49,7 +50,6 @@ const Banner: React.FC = () => {
 
           <Swiper
             effect={"coverflow"}
-            grabCursor={true}
             centeredSlides={true}
             slidesPerView={"auto"}
             loop={true}
@@ -59,6 +59,7 @@ const Banner: React.FC = () => {
               depth: 100,
               modifier: 2.5,
             }}
+            initialSlide={3}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}
             className="banner-swiper"
@@ -74,23 +75,34 @@ const Banner: React.FC = () => {
             </SwiperSlide>
           </Swiper>
 
-          <div className="mini-banner brands">
-            <div className="brand-item">
+          <Swiper
+            className="mini-banner brands"
+            slidesPerView={5}
+            spaceBetween={15}
+            loop={true}
+            breakpoints={{
+              340: {
+                slidesPerView: 3,
+                spaceBetween: 10
+              }
+            }}
+          >
+            <SwiperSlide className="brand-item">
               <img src={brand1} alt="brand image" />
-            </div>
-            <div className="brand-item">
+            </SwiperSlide>
+            <SwiperSlide className="brand-item">
               <img src={brand2} alt="brand image" />
-            </div>
-            <div className="brand-item">
+            </SwiperSlide>
+            <SwiperSlide className="brand-item">
               <img src={brand3} alt="brand image" />
-            </div>
-            <div className="brand-item">
+            </SwiperSlide>
+            <SwiperSlide className="brand-item">
               <img src={brand4} alt="brand image" />
-            </div>
-            <div className="brand-item">
+            </SwiperSlide>
+            <SwiperSlide className="brand-item">
               <img src={brand5} alt="brand image" />
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </>

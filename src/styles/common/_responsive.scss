@@ -127,35 +127,37 @@
   .section-banner {
     margin: 20px 0;
 
-    .banner-images {
-      display: none !important;
-    }
+    .container {
+      padding: 0 !important;
 
-    .banner-swiper {
-      display: block !important;
-
-      .swiper-slide {
-        width: 290px !important;
-        height: 290px !important;
+      .banner-images {
+        display: none !important;
       }
 
-      .swiper-slide img {
-        width: 100% !important;
-        height: 100% !important;
+      .banner-swiper {
+        display: block !important;
+
+        .swiper-slide {
+          width: 290px !important;
+          height: 290px !important;
+        }
+
+        .swiper-slide img {
+          width: 100% !important;
+          height: 100% !important;
+        }
       }
-    }
 
-    .mini-banner.brands {
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px !important;
+      .mini-banner.brands {
+        border-radius: 0 !important;
 
-      .brand-item {
-        height: 42px;
-        border-radius: 6px !important;
-        &:last-child {
-          img {
-            width: 40px;
+        .brand-item {
+          height: 42px;
+          border-radius: 6px !important;
+          &:last-child {
+            img {
+              width: 40px;
+            }
           }
         }
       }

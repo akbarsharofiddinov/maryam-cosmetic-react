@@ -35,13 +35,24 @@
         max-height: 300px;
         overflow: auto;
 
+        &::-webkit-scrollbar {
+          width: 10px !important;
+
+          background-color: #ebebeb;
+          border-radius: 100px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #ff5b91;
+          border-radius: 100px;
+        }
+
         .order-item {
           display: flex;
           gap: 40px;
 
           img {
             width: 140px !important;
-            
           }
 
           .body {

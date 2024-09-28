@@ -7,9 +7,11 @@ import { FiLogOut } from "react-icons/fi";
 import { CustomButton, CustomSelect, Login, Modal, Signup } from "..";
 import { useAppDispatch, useAppSelector } from "@/store/hooks/hooks";
 import { setModal, setUserToken } from "@/store/maryamSlice/maryamSlice";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Header: React.FC = () => {
   const [count, setCount] = useState(0);
+  const [showHeaderBarMenu, setShowHeaderBarMenu] = useState(false);
 
   const dispatch = useAppDispatch();
 
@@ -203,20 +205,47 @@ const Header: React.FC = () => {
               )}
             </div>
           </div>
-          <CustomButton type="regular" cls={"header-bar_btn"}>
-            <svg
-              width="16"
-              height="14"
-              viewBox="0 0 16 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div
+            className={
+              showHeaderBarMenu
+                ? "mobile-headerBar-box active"
+                : "mobile-headerBar-box"
+            }
+          >
+            <CustomButton
+              type="regular"
+              cls={"header-bar_btn"}
+              setModal={setShowHeaderBarMenu}
             >
-              <path
-                d="M0.5 0.333344H15.5V2.00001H0.5V0.333344ZM5.5 6.16668H15.5V7.83334H5.5V6.16668ZM0.5 12H15.5V13.6667H0.5V12Z"
-                fill="white"
-              />
-            </svg>
-          </CustomButton>
+              <svg
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.5 0.333344H15.5V2.00001H0.5V0.333344ZM5.5 6.16668H15.5V7.83334H5.5V6.16668ZM0.5 12H15.5V13.6667H0.5V12Z"
+                  fill="white"
+                />
+              </svg>
+            </CustomButton>
+
+            <div className="menu">
+              <button
+                className="close-btn"
+                onClick={() => setShowHeaderBarMenu(false)}
+              >
+                <AiOutlineClose />
+              </button>
+              <a href="/my-orders">Мои заказы</a>
+              <a href="/cart">Корзина</a>
+              <a href="favourite">Избранное</a>
+              <button onClick={handleLogOut}>
+                Выйти <FiLogOut />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       {modal && <Modal>{userToken.length > 0 ? <Login /> : <Signup />}</Modal>}

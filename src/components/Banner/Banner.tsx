@@ -59,7 +59,7 @@ const Banner: React.FC = () => {
               depth: 100,
               modifier: 2.5,
             }}
-            initialSlide={3}
+            initialSlide={10}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}
             className="banner-swiper"
@@ -81,10 +81,14 @@ const Banner: React.FC = () => {
             spaceBetween={15}
             loop={true}
             breakpoints={{
+              900: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+              },
               340: {
                 slidesPerView: 3,
-                spaceBetween: 10
-              }
+                spaceBetween: 10,
+              },
             }}
           >
             <SwiperSlide className="brand-item">

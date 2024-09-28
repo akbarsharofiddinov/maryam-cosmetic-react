@@ -18,6 +18,10 @@
   }
 }
 
+.announcement-banner .mobile-image {
+  display: none !important;
+}
+
 @media screen and (max-width: 1280px) {
   .container {
     max-width: 1140px !important;
@@ -79,6 +83,15 @@
 
   .app-wrapper {
     margin: 0 !important;
+  }
+
+  .section-title {
+    margin: 0;
+
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+    }
   }
 
   header {
@@ -170,15 +183,7 @@
     }
   }
 
-  .section-title {
-    margin: 0;
-
-    .title {
-      font-size: 26px;
-      font-weight: 600;
-    }
-  }
-
+  // Section Discounted Products
   .section-discounted-products {
     .swiper-slide {
       display: flex;
@@ -243,6 +248,7 @@
     }
   }
 
+  // Section Special
   .section-special {
     .special-menu {
       display: grid !important;
@@ -296,7 +302,6 @@
   }
 
   /* Section Catalog */
-
   .section-catalog {
     .catalog-menu {
       grid-template-columns: repeat(2, 1fr) !important;
@@ -330,8 +335,10 @@
   }
 
   /* Section Products */
-
   .section-products {
+    .section-inner {
+      flex-direction: column-reverse !important;
+    }
     .products-filter {
       overflow: auto;
       max-width: 400px;
@@ -342,6 +349,10 @@
       border-radius: 0;
       align-items: center;
       gap: 10px;
+    }
+
+    .pagination-box {
+      grid-row-start: attr(data-last) !important;
     }
   }
 
@@ -398,64 +409,61 @@
 
   /* Section Announcement banner */
 
-  .announcement-banner .section-inner {
-    display: flex;
-    justify-content: space-between;
-  }
+  .announcement-banner {
+    height: 100% !important;
+    .section-inner {
+      .left,
+      .images {
+        display: none !important;
+      }
+    }
 
-  .announcement-banner .images {
-    display: none;
-  }
-
-  .announcement-banner .mobile-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .announcement-banner .left p {
-    font-size: 16px;
-  }
-
-  .announcement-banner .left h3 {
-    font-size: 26px;
+    .mobile-image {
+      display: block !important;
+    }
   }
 
   /* Section gift sertification */
-  .gift-sertifications .sertification-card .title {
-    font-size: 16px;
+  .gift-sertifications {
+    .sertification-card {
+      max-width: 360px;
+
+      .title {
+        font-size: 16px;
+      }
+
+      .body {
+        width: 240px;
+        justify-content: space-between;
+
+        .top {
+          button {
+            font-size: 10px;
+          }
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .date {
+          font-size: 12px;
+        }
+      }
+    }
   }
 
-  .gift-sertifications .sertification-card .top h1 {
-    font-size: 32px;
-  }
+  footer {
+    .logo.footer-logo {
+      display: none;
+    }
 
-  .gift-sertifications .sertification-card .top button {
-    font-size: 10px;
-  }
-
-  .gift-sertifications .sertification-card .desc {
-    font-size: 13px;
-  }
-
-  .gift-sertifications .sertification-card .date {
-    font-size: 12px;
-  }
-
-  .gift-sertifications .sertification-card {
-    max-width: 360px;
-  }
-
-  .gift-sertifications .sertification-card .body {
-    width: 240px;
-    justify-content: space-between;
-  }
-
-  footer .footer-columns {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  footer .logo.footer-logo {
-    display: none;
+    .footer-columns {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

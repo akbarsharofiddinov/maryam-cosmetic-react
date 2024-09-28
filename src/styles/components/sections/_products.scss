@@ -1,4 +1,39 @@
 .section-products {
+  .section-inner {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+
+    .showAll-btn_wrapper {
+      width: 100%;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      display: none;
+
+      .showAll-btn {
+        text-align: center;
+        border: none;
+        background-color: #fff;
+        padding: 15px 35px;
+        border-radius: 100px;
+        width: 300px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $main-bg;
+        margin-top: 20px;
+        cursor: pointer;
+
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+          background-color: #e51158;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+
   .products-filter {
     display: inline-flex;
     gap: 10px;
@@ -224,34 +259,6 @@
 
       &:hover {
         color: $main-bg;
-      }
-    }
-  }
-
-  .showAll-btn_wrapper {
-    width: 100%;
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 5;
-
-    .showAll-btn {
-      text-align: center;
-      border: none;
-      background-color: #fff;
-      padding: 15px 35px;
-      border-radius: 100px;
-      width: 300px;
-      font-size: 16px;
-      font-weight: 600;
-      color: $main-bg;
-      margin-top: 20px;
-      cursor: pointer;
-
-      transition: background-color 0.2s, color 0.2s;
-
-      &:hover {
-        background-color: #e51158;
-        color: #fff !important;
       }
     }
   }

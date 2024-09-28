@@ -6,6 +6,8 @@ import announcement2 from "@/images/announcement/image 2.png";
 import announcement3 from "@/images/announcement/image 3.png";
 import announcement4 from "@/images/announcement/image 4.png";
 
+import mobile from "@/images/announcement/mobile.png";
+
 const Announcement: React.FC = () => {
   return (
     <>
@@ -14,8 +16,8 @@ const Announcement: React.FC = () => {
           <div className="section-inner">
             <div className="left">
               <p>
-                <span>В воскресенье</span> скидка <span>25%</span> на все средства по уходу
-                за волосами.
+                <span>В воскресенье</span> скидка <span>25%</span> на все
+                средства по уходу за волосами.
               </p>
             </div>
             <div className="images">
@@ -26,10 +28,7 @@ const Announcement: React.FC = () => {
             </div>
 
             <div className="mobile-image">
-              <img
-                src="./src/images/announcement/mobile/image.png"
-                alt="announcement image"
-              />
+              <img src={mobile} alt="" />
             </div>
           </div>
         </div>

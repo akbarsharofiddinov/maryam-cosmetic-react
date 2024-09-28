@@ -49,7 +49,7 @@ const Products: React.FC = () => {
               <div className="filter-box monthly-discount">Месячная скидка</div>
             </div>
           </div>
-          <div className="products">
+          <div className="section-inner">
             {isLoading ? (
               <>
                 <div>Loading</div>
@@ -58,7 +58,7 @@ const Products: React.FC = () => {
               <>
                 <div>Error</div>
               </>
-            ) : showAll ? (
+            ) : showAll || screen.width <= 540 ? (
               <>
                 <div className="pagination-box">
                   <Pagination
@@ -70,35 +70,39 @@ const Products: React.FC = () => {
                     total={pages.length * 10}
                   />
                 </div>
-                {productData.map((product, index) => (
-                  <ProductItem
-                    data={product}
-                    key={`id:${index}_${product.name}`}
-                  />
-                ))}
-              </>
-            ) : (
-              <>
-                <div className="pagination-box">
-                  <Pagination
-                    defaultCurrent={currentPage}
-                    onChange={(value) => {
-                      setCurrentPageState(value);
-                    }}
-                    showSizeChanger={false}
-                    total={pages.length * 10}
-                  />
-                </div>
-                {productData.map((product, index) =>
-                  index < 20 ? (
+                <div className="products">
+                  {productData.map((product, index) => (
                     <ProductItem
                       data={product}
                       key={`id:${index}_${product.name}`}
                     />
-                  ) : (
-                    ""
-                  )
-                )}
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="pagination-box" data-last={productData.length}>
+                  <Pagination
+                    defaultCurrent={currentPage}
+                    onChange={(value) => {
+                      setCurrentPageState(value);
+                    }}
+                    showSizeChanger={false}
+                    total={pages.length * 10}
+                  />
+                </div>
+                <div className="products">
+                  {productData.map((product, index) =>
+                    index < 20 ? (
+                      <ProductItem
+                        data={product}
+                        key={`id:${index}_${product.name}`}
+                      />
+                    ) : (
+                      ""
+                    )
+                  )}
+                </div>
               </>
             )}
             <div className="showAll-btn_wrapper">

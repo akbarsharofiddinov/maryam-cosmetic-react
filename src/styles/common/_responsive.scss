@@ -541,6 +541,7 @@
 
     .footer-columns {
       grid-template-columns: repeat(1, 1fr);
+      justify-content: center !important;
     }
   }
 
@@ -598,13 +599,15 @@
 
   .my-orders {
     .section-title {
-      margin: 40px 0;
+      margin: 20px 0;
     }
 
     .page-inner {
       .order-boxes {
         display: flex !important;
         flex-direction: column;
+        gap: 15px !important;
+        margin: 0 !important;
 
         .order-box {
           .top {

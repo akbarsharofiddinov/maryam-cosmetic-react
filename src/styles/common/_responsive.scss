@@ -40,16 +40,11 @@
         align-items: center;
       }
 
-      background-color: $main-bg;
-      color: #fff;
+      background-color: transparent;
+      text-align: start;
       border: none;
-      padding: 12px;
+      padding: 12px 20px;
       font-size: 16px;
-
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
     }
   }
 }
@@ -392,6 +387,7 @@
           grid-column: 1 / 3 !important;
           display: flex;
           flex-direction: row !important;
+          padding: 10px !important;
 
           svg {
             width: 34px;
@@ -467,9 +463,17 @@
         .order-btn {
           font-size: 14px;
 
+          gap: 5px !important;
+
           svg {
             width: 15px;
             height: 15px;
+          }
+
+          span {
+            opacity: 1;
+            font-size: 16px;
+            transform: translateY(2px);
           }
         }
 
@@ -677,6 +681,15 @@
             }
           }
         }
+      }
+    }
+  }
+
+  // Modal
+  .modal {
+    .modal-inner {
+      .auth-box {
+        padding: 0 20px;
       }
     }
   }

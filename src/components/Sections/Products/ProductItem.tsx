@@ -208,7 +208,7 @@ const ProductItem: React.FC<IProps> = ({ data, quantity, inCart }: IProps) => {
                 fill="white"
               />
             </svg>
-            В корзину
+            <span>В корзину</span>
           </button>
           <div
             className={showCountBox ? "count-box show" : "count-box"}

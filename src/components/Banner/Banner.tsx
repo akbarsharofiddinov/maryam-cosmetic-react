@@ -57,8 +57,10 @@ const Banner: React.FC = () => {
               rotate: 0,
               stretch: 0,
               depth: 100,
-              modifier: 2.5,
+              modifier: 1,
+              slideShadows: false,
             }}
+            spaceBetween={25}
             initialSlide={10}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}

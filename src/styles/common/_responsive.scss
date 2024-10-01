@@ -73,6 +73,16 @@
     max-width: 1140px !important;
   }
   .section-banner {
+    .banner-swiper {
+      .swiper-slide {
+        img {
+          border-radius: 20px !important;
+        }
+
+        box-shadow: unset !important;
+        
+      }
+    }
     .banner-images {
       img {
         max-width: 240px;
@@ -501,14 +511,27 @@
   .announcement-banner {
     height: 100% !important;
     .section-inner {
-      .left,
+      display: flex;
+      justify-content: end;
+
+      .left {
+        flex: 65%;
+        p {
+          font-size: 16px !important;
+
+          span {
+            font-size: 20px !important;
+          }
+        }
+      }
+
       .images {
         display: none !important;
       }
-    }
 
-    .mobile-image {
-      display: block !important;
+      .mobile-image {
+        display: block !important;
+      }
     }
   }
 

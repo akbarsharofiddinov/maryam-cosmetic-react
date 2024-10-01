@@ -3,7 +3,8 @@ footer {
   padding: 40px 0;
 
   .footer-title {
-    text-align: center;
+    display: grid;
+    place-items: center;
   }
 
   .logo.footer-logo {

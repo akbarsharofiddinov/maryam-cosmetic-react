@@ -29,6 +29,12 @@
     }
 
     button {
+      background-color: transparent;
+      text-align: start;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+
       &.close-btn {
         background-color: transparent;
         position: static;
@@ -39,14 +45,12 @@
         display: flex;
         align-items: center;
       }
-
-      background-color: transparent;
-      text-align: start;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
     }
   }
+}
+
+.catalog-detail .filter-box {
+  display: none !important;
 }
 
 .section-discounted-products,
@@ -121,6 +125,14 @@
 @media screen and (max-width: 540px) {
   .container {
     max-width: 360px;
+  }
+
+  .navigation-bar {
+    display: none !important;
+  }
+
+  .sidebar {
+    display: none !important;
   }
 
   .app-wrapper {
@@ -682,6 +694,164 @@
             .method {
               border-radius: 20px !important;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .catalog-detail {
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+
+    .filter-box {
+      display: flex !important;
+      align-items: start;
+      flex-direction: column;
+      gap: 30px;
+      font-size: 16px;
+      font-weight: 500;
+
+      padding: 12px;
+      border-radius: 20px;
+      margin-bottom: 25px;
+
+      .price {
+        width: 100%;
+        background-color: #fff;
+        .price-filter {
+          width: 100% !important;
+
+          .filter-inputs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .catalog {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+
+        .select-item {
+          .selected {
+            background-color: #f1f3f6;
+            justify-content: space-between;
+          }
+
+          .menu {
+            max-height: 200px !important;
+            overflow: auto;
+            padding: 5px;
+
+            .menu-item {
+              padding: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .modal {
+      align-items: end;
+
+      .modal-inner {
+        height: 80%;
+
+        .closeModal-btn {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .details-page {
+    // Product Details
+    .product-details {
+      flex-direction: column;
+      margin-top: 0 !important;
+
+      .right.details {
+        flex-direction: column;
+
+        .similar-colors {
+          flex-direction: row !important;
+        }
+
+        .more-details {
+          .top {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .info {
+            .about-product {
+              h4,
+              .title {
+                font-size: 22px !important;
+                font-weight: 600;
+              }
+
+              ul {
+                li {
+                  font-size: 16px !important;
+                }
+              }
+
+              .price-tag {
+                .old-price {
+                  span {
+                    &:first-child {
+                      font-size: 16px !important;
+                      text-decoration: line-through;
+                    }
+                  }
+                }
+                .current-price {
+                  font-size: 20px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // Comments
+    .section-comments {
+      .container {
+        padding: 0 !important;
+
+        .swiper-slide {
+          width: 330px !important;
+          margin: 0 5px !important;
+
+          img {
+            width: 40px !important;
+            height: 40px !important;
+          }
+
+          .stars {
+            gap: 5px !important;
+
+            svg {
+              width: 20px !important;
+              height: 20px !important;
+            }
+          }
+
+          .comment {
+            font-size: 14px !important;
           }
         }
       }

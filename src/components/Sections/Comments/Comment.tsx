@@ -1,6 +1,6 @@
 import React from "react";
-
 import commentImg from "@/images/comment/comment-1.png";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Comment: React.FC = () => {
   return (
@@ -10,8 +10,20 @@ const Comment: React.FC = () => {
           <div className="section-title">
             <h3 className="title">Отзывы</h3>
           </div>
-          <div className="comments">
-            <div className="comment-box">
+          <Swiper
+            breakpoints={{
+              900: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              540: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+            }}
+            className="comments"
+          >
+            <SwiperSlide className="comment-box">
               <div className="top">
                 <img src={commentImg} alt="commant user image" />
                 <div className="rating">
@@ -85,8 +97,8 @@ const Comment: React.FC = () => {
                 Мне очень понравился лак, он быстро сохнет, имеет насыщенный
                 цвет и не смывается.
               </p>
-            </div>
-            <div className="comment-box">
+            </SwiperSlide>
+            <SwiperSlide className="comment-box">
               <div className="top">
                 <img src={commentImg} alt="commant user image" />
                 <div className="rating">
@@ -160,8 +172,8 @@ const Comment: React.FC = () => {
                 Мне очень понравился лак, он быстро сохнет, имеет насыщенный
                 цвет и не смывается.
               </p>
-            </div>
-            <div className="comment-box">
+            </SwiperSlide>
+            <SwiperSlide className="comment-box">
               <div className="top">
                 <img src={commentImg} alt="commant user image" />
                 <div className="rating">
@@ -235,8 +247,8 @@ const Comment: React.FC = () => {
                 Мне очень понравился лак, он быстро сохнет, имеет насыщенный
                 цвет и не смывается.
               </p>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </>

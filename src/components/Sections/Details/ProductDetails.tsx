@@ -194,9 +194,9 @@ const ProductDetails: React.FC = () => {
                   </ul>
                   <div className="price-tag">
                     {/* <p className="old-price">
-                    <span>120,000 so‘m</span>
-                    <span className="discount">-20%</span>
-                  </p> */}
+                      <span>120,000 so‘m</span>
+                      <span className="discount">-20%</span>
+                    </p> */}
                     <p className="current-price">
                       {formatter(productData?.price!) + " сумм"}
                     </p>

@@ -1,6 +1,6 @@
 .catalog-detail {
   margin: 40px 0;
-  
+
   .section-title {
     margin: 20px 0;
   }
@@ -15,6 +15,32 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin: 0;
+    }
+  }
+
+  .modal {
+    .modal-inner {
+      background-color: #f5f6f9;
+      align-items: start !important;
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .filter-box {
+        background-color: #fff;
+        z-index: 10;
+        margin-top: 40px;
+        width: 100%;
+      }
     }
   }
 }

@@ -240,6 +240,9 @@ const Header: React.FC = () => {
               >
                 <AiOutlineClose />
               </button>
+              <a onClick={() => setShowHeaderBarMenu(false)} href="/catalogs">
+                Каталоги
+              </a>
               <a onClick={() => setShowHeaderBarMenu(false)} href="/my-orders">
                 Мои заказы
               </a>
